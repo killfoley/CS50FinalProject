@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Transaction History</h2>
+
+<table class="table table-striped table-bordered mt-3">
+    <thead class="table-light">
+        <tr>
+            <th>Time</th>
+            <th>Product</th>
+            <th>Change</th>
+            <th>Action</th>
+            <th>User</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row.timestamp }}</td>
+            <td>{{ row.name }}</td>
+            <td>{{ row.change }}</td>
+            <td>{{ row.action | capitalize }}</td>
+            <td>{{ row.username }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

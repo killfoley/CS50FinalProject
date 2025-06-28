@@ -1,0 +1,14 @@
+Create database from schema
+    sqlite3 hardware.db < schema.sql
+
+Populate with test data
+    sqlite3 hardware.db < seed.sql
+
+Confirm the DB was setup
+    sqlite3 hardware.db
+
+Queries
+    .tables
+    SELECT * FROM users;
+    SELECT * FROM products;
+    .quit
